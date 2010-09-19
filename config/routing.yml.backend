@@ -1,0 +1,18 @@
+
+sf_faq_faq:
+  class: sfDoctrineRouteCollection
+  options:
+    model:               sfFaqFaq
+    module:              sfFaqAdmin
+    prefix_path:         /sfFaqAdmin
+    column:              id
+    with_wildcard_routes: true
+
+sf_faq_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:               sfFaqCategory
+    module:              sfFaqCategoryAdmin
+    prefix_path:         /sfFaqCategoryAdmin
+    column:              id
+    with_wildcard_routes: true

@@ -1,0 +1,13 @@
+
+
+sf_faq_index:
+  url:          /faq
+  param:        { module: sfFaq, action: index }
+
+sf_faq_category:
+  url:          /faq/:category_slug
+  param:        { module: sfFaq, action: index }
+
+sf_faq_question:
+  url:          /faq/:category_slug/:faq_slug
+  param:        { module: sfFaq, action: index }

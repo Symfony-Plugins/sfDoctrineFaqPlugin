@@ -1,0 +1,27 @@
+.sf_faq A{ color: blue; }
+
+.sf_faq .title{ font-size: 28px; text-align: center; }
+
+.sf_faq #tabs_sf_faq_categories{ font-size: 30px;  }
+
+.sf_faq #tabs_sf_faq_categories .tabs_sf_faq_category-on{ font-weight: bold; }
+
+.sf_faq .answer {
+	float: left;
+	padding-left: 30px;
+	margin: 10px 0 10px 10px;
+	background:url(/sfFaqPlugin/images/sf_faq_answer.gif) repeat-y 20px 0px;
+}
+
+
+.sf_faq #answer p.question-on{
+	color: blue;
+	font-weight:bold;
+	padding: 0 25px 0px 25px;
+}
+
+.sf_faq .question_separator { clear: both; margin: 10px 0 10px 0; }
+
+
+
+.sf_faq_admin A { color: blue; font-size: 30px; }

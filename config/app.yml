@@ -1,0 +1,6 @@
+all:
+  sf_doctrine_faq_plugin:
+
+    first_category_by_default:          true  # default : false, open the first category into load module
+    first_question_by_default:          true  # default : false, open the first question into load category
+

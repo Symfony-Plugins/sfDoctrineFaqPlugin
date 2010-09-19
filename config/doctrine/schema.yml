@@ -1,0 +1,51 @@
+sfFaqCategory:
+  options:
+    comment: FAQ Categories
+    type:     INNODB
+    collate:  utf8_general_ci
+    charset:  utf8
+    symfony:
+      form:   true
+      filter: true
+
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [name]
+      unique: [name]
+
+  columns:
+    name:          { type: string(255) }
+    description:   { type: clob }
+    is_active:     { type: boolean, notnull: true, default: 0 }
+
+  indexes:
+    is_active:
+      fields: [is_active]
+
+
+
+sfFaqFaq:
+  options:
+    comment: FAQ Elements
+    type:     INNODB
+    collate:  utf8_general_ci
+    charset:  utf8
+    symfony:
+      form:   true
+      filter: true
+
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [question]
+      unique: [Category,question]
+
+
+  columns:
+    question:      { type: string(255) }
+    answer:        { type: clob }
+    category_id:   { type: bigint(20) }
+
+  relations:
+    sfFaqCategory: { onDelete: CASCADE, local: category_id, foreign: id, alias: Category }
